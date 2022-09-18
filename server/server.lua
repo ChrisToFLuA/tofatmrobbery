@@ -16,7 +16,7 @@ AddEventHandler('tofatm:onrobatm', function(coordP, act, coordatm)
 	if inventory == 'oxinventory' then
 		card = exports.ox_inventory:GetItem(source, item, nil, false)
 	elseif inventory == 'default' then
-		card = xPlayer.getInventoryItem(item).count
+		card = xPlayer.getInventoryItem(item)
 	end
 	local copsOnline = ESX.GetExtendedPlayers('job', 'police')
     if #copsOnline >= mincops then
