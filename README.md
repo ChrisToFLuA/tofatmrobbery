@@ -2,7 +2,7 @@
 - Preview video : https://www.youtube.com/watch?v=0MLVBTfSXqQ
 - Forum about this script : 
 - Resmon 0.00 ms
-When you ensure the script the first time to test it, instead of discronnect / reconnect just use /robatm command.
+- When you ensure the script the first time to test it, instead of discronnect / reconnect just use /robatm command.
 
 # a lot of configurations in the script
 ```
