@@ -1,0 +1,16 @@
+{
+    "no_card": "You don't have card for hack this atm",
+    "no_glitch": "Fail glitch guy !",
+    "no_robhere": "No Rob ATM here, go in the city",
+    "hack_first": "Hack the ATM first",
+    "already_hack": "You have already hack an atm",
+    "already_stole": "You have already stole an atm",
+    "stole": "You stole %s",
+    "robbing_inprogress": "An ATM rob is in progress, come back later",
+    "no_cops": "The Hack is compromised, come back later",
+    "alarm_notify": "Someone is Hacking an ATM",
+    "hack_atm": "Hack the ATM",
+    "steal_money": "Steal the money",
+    "hack_success": "Hack is successful",
+    "steal_success": "ATM is enpty"
+}
