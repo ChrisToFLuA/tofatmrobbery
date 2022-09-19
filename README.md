@@ -24,5 +24,5 @@ OptionsATM.item = 'card_hack'                          -- configure item needed 
 
 - ox_lib : https://github.com/overextended/ox_lib
 - qtarget : https://github.com/overextended/qtarget
+- Optional : ox_inventory - https://github.com/overextended/ox_inventory
 
-## Optional : ox_inventory - https://github.com/overextended/ox_inventory
