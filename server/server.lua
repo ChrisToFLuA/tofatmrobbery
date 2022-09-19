@@ -25,7 +25,7 @@ AddEventHandler('tofatm:onrobatm', function(coordP, act, coordatm)
                 TriggerClientEvent('tofatm:msgnottimer', xPlayer.source)
             end
             if GetGameTimer() > nextrobATM then
-				if card.count > 0 then
+				if card and card.count > 0 then
                 	SetnextrobATM()
                 	TriggerClientEvent('tofatm:robstateatm', xPlayer.source)
 					Citizen.Wait(300)
@@ -48,7 +48,7 @@ AddEventHandler('tofatm:onrobatm', function(coordP, act, coordatm)
             end
         end
         if nextrobATM == 0 then
-			if card.count > 0 then
+			if card and card.count > 0 then
             	TriggerClientEvent('tofatm:robstateatm', xPlayer.source)
             	SetnextrobATM()
 				Citizen.Wait(300)
