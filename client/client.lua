@@ -95,9 +95,9 @@ AddEventHandler('tofatm:actionsatm', function(act, coordatm)
 	elseif act == 'steal' and stole then
 		TriggerEvent('tofatm:msgalreadystole')
     elseif act == 'steal' and not stole and checkatm then
-		stealanimation()
-		TriggerServerEvent('tofatm:lootmoney_s')
         stole = true
+        stealanimation()
+		TriggerServerEvent('tofatm:lootmoney_s')
 	end
 end)
 
