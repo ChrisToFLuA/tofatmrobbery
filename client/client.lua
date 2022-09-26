@@ -408,8 +408,8 @@ end)
 ------------------------ msg timer --------------------------------------
 -------------------------------------------------------------------------
 
-RegisterNetEvent("toffleeca:msgnottimer")
-AddEventHandler("toffleeca:msgnottimer", function()
+RegisterNetEvent("tofatm:msgnottimer")
+AddEventHandler("tofatm:msgnottimer", function()
     ------------------**notification**----------------------
     lib.showTextUI(locale('robbing_inprogress'), {
         position = "top-center",
