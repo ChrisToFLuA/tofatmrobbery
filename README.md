@@ -20,6 +20,10 @@ OptionsATM.trackinginterval = 6000                     -- configure in ms the in
 OptionsATM.item = 'card_hack'                          -- configure item needed to hack the atm
 ```
 
+# item to create
+
+card_hack
+
 # Dependencies
 
 - ox_lib : https://github.com/overextended/ox_lib
