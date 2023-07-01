@@ -33,35 +33,40 @@ function initrobatm()
             {name = 'ambulance'},       -- EMS in service
             {name = 'offambulance'},    -- EMS out of service
         }
+        
+        -- Add a variable to track if the player's job matches any job name
+        local isJobMatch = false
+        
         for a = 1, #jobs, 1 do
             local jobsname = jobs[a].name
-            if ESX.PlayerData.job.name ~= jobsname then     -- test on jobname
-                exports.qtarget:AddTargetModel({-1364697528, 506770882, -870868698, -1126237515}, {
-                    options = {
-                        {
-                            icon = "fas fa-box-circle-check",
-                            label = locale('hack_atm'),
-                            action = function(entity)
-                                local act = 'hack'
-                                local coordatm = GetEntityCoords(entity)
-                                TriggerEvent('tofatm:dispatchatm', act, coordatm)
-                            end,
-                        },
-                        {
-                            icon = "fas fa-box-circle-check",
-                            label = locale('steal_money'),
-                            action = function(entity)
-                                local act = 'steal'
-                                local coordatm = GetEntityCoords(entity)
-                                TriggerEvent('tofatm:dispatchatm', act, coordatm)
-                            end,
-                        },
-                    },
-                    distance = 1.5
-                })	
-            else
-                return										-- return if the player's job is in local jobs
+            if ESX.PlayerData.job.name == jobsname then
+                isJobMatch = true
+                break -- Exit the loop if a match is found
             end
+        end
+        
+        -- Check if the player's job doesn't match any job name
+        if not isJobMatch then
+            exports.ox_target:addModel({-1364697528, 506770882, -870868698, -1126237515}, {
+                label = locale('hack_atm'),
+                icon = "fas fa-credit-card",
+                distance = 1.5,
+                onSelect = function(data)
+                    local act = 'hack'
+                    local coordatm = GetEntityCoords(data.entity)
+                    TriggerEvent('pdl_atmrob:dispatchatm', act, coordatm)
+                end,
+            })
+            exports.ox_target:addModel({-1364697528, 506770882, -870868698, -1126237515}, {
+                label = locale('steal_money'),
+                icon = "fas fa-sack-dollar",
+                distance = 1.5,
+                onSelect = function(data)
+                    local act = 'steal'
+                    local coordatm = GetEntityCoords(data.entity)
+                    TriggerEvent('pdl_atmrob:dispatchatm', act, coordatm)
+                end,
+            })
         end
     end)
 end
